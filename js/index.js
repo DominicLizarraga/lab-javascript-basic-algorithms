@@ -52,3 +52,18 @@ let newWord = hacker1.toUpperCase();
       console.log(paragraphGenerator(paragraph))
 
       // palindrome checker
+
+      const palindromeChecker = ((phrase) => {
+        // get unwanted characters ","
+        const unwanted = /[\W_]/g;
+        // lower case everything and replace the unwanted
+        let lowerString = phrase.toLowerCase().replace(unwanted, "");
+        // chain the string and reverse 
+        let reverseString = lowerString.split("").reverse().join("")
+        // verify is the lowerString is equal to reverseString
+        return reverseString === lowerString
+      });
+   
+    
+    console.log(palindromeChecker("Amor, Roma"));
+
