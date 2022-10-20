@@ -40,4 +40,15 @@ let newWord = hacker1.toUpperCase();
         console.log("What?! You both have the same name?")
       } 
       
-      
+      // lorem ipsum generator
+
+      const paragraphGenerator = ((word) => {
+        const numberOfWords = word.split(" ").length
+        
+        const count = word.split('et').length - 1;
+        return `The paragraph has ${numberOfWords} & the letters "et" has repeteated ${count} many times.`
+      });
+   
+      console.log(paragraphGenerator(paragraph))
+
+      // palindrome checker
